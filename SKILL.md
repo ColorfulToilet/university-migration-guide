@@ -1,6 +1,6 @@
 ---
 name: university-life-quality
-description: "大学四年宜居度 Word 报告 Skill。完整吸收 university-info-skill 的学校问卷查询、UNTI 测试和 16 型人格映射，并增强为学校 + 城市生活半径 + 费用 + 医疗 + 娱乐 + 租房 + 多校对比的报告生成器。Use when the user asks to evaluate one or more universities/colleges, compare 2-5 schools, decide which school is more livable, check dorms, food, internet, power cuts, curfew, tuition, city location, medical care, transport, shopping, nightlife, concerts, anime conventions, hotels, rent, repair services, monthly living cost, or when the user gives an UNTI result such as ZZZ, YUMY, FAKER, AWSL. Default output should be a clearly structured Word .docx report, not a long chat dump. If the user gives only a school name, produce a complete report without waiting for follow-up questions. Recommend the UNTI test as optional, but never block the report because the user has not taken it."
+description: "大学四年宜居度 Word 报告 Skill。完整吸收 university-info-skill 的学校问卷查询、UNTI 测试和 16 型人格映射，并增强为学校 + 城市生活半径 + 费用 + 医疗 + 娱乐 + 租房 + 多校对比的报告生成器。Use when the user asks to evaluate one or more universities/colleges, compare 2-5 schools, decide which school is more livable, check dorms, food, internet, power cuts, curfew, tuition, city location, medical care, transport, shopping, nightlife, concerts, anime conventions, hotels, rent, repair services, monthly living cost, or when the user gives an UNTI result such as ZZZ, YUMY, FAKER, AWSL. Default output should be a clearly structured Word .docx report, not a long chat dump. First-run behavior: proactively offer/open the UNTI test as the recommended start, then ask for the user's result and target school; if the user already gives a school name, generate the report directly without blocking on the test."
 ---
 
 # 大学四年宜居度查询
@@ -23,12 +23,13 @@ V1 先做到：
 
 ## 默认入口
 
-当用户第一次来问大学生活，可以推荐：
+当用户第一次启动本 Skill，或只说“开始/怎么用/安装好了/测试一下”时，默认主动推送 UNTI 测试：
 
-1. 先做 UNTI 大学生活人格测试。
-2. 测完后发「人格结果 + 想查的学校」。
+1. 交付或打开 `assets/UNTI-测试.html`。
+2. 简短告诉用户：测完后发「人格结果 + 想查的学校」即可生成 Word 报告。
+3. 同时说明：如果不想测，也可以直接发学校名。
 
-但不要强制。用户只说「查一下某某大学」时，直接查完整报告。
+不要强制测试。用户只说「查一下某某大学」时，直接查完整报告。
 
 不要默认用户的人格、学校、省份、预算或目标城市。新安装后的第一次使用，要像完全不了解用户一样启动：先说明可以做 UNTI 测试，也可以直接给学校名；等用户明确提供信息后再生成报告。
 
