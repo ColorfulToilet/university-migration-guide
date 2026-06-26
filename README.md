@@ -20,12 +20,18 @@ bash scripts/install.sh
 安装后重启 Codex。之后可以这样问：
 
 ```text
-用 $university-life-quality 查福州大学至诚学院，我是 ZZZ，生成 Word 报告。
+用 $university-life-quality 打开 UNTI 大学生活人格测试。
 ```
 
 ```text
-用 $university-life-quality 对比福州大学至诚学院和厦门大学嘉庚学院，帮我选更适合生活四年的。
+用 $university-life-quality 查某某大学，生成 Word 报告。
 ```
+
+```text
+用 $university-life-quality 对比 A 大学和 B 大学，帮我选更适合生活四年的。
+```
+
+第一次使用时，不要默认用户的人格或学校。先让用户选择：做 UNTI 测试，或直接给学校名。
 
 ## 费用
 
@@ -40,4 +46,3 @@ bash scripts/install.sh
 - 最新学费、住宿费、医疗、交通、演出、酒店、租房等信息需要 Codex 在生成报告时联网核实。
 
 学生问卷不是官方通知，学校条件可能变化。正式报考前请以学校官网、招生章程和最新通知为准。
-
