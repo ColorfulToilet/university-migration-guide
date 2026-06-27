@@ -1,6 +1,18 @@
 # NOTICE
 
-This project contains adapted material from the following open-source dataset:
+This project is a derivative of the following open-source Skill package:
+
+## Original Skill source
+
+- Project: liliMozi / university-info-skill
+- Repository: https://github.com/liliMozi/university-info-skill
+
+The university reference files and index, `assets/cover.png`, the self-contained
+`assets/UNTI-测试.html` page, its embedded images and fonts, the UNTI personality
+copy and mapping, and the original license and notice structure were inherited
+from or adapted from that repository.
+
+The original Skill package in turn uses the following open-source dataset:
 
 ## Original data source
 
@@ -11,20 +23,15 @@ This project contains adapted material from the following open-source dataset:
 
 The university life quality data in `references/` is derived from and adapted from the above project.
 
-## Modifications
+## Modifications in this repository
 
-This repository reorganizes and adapts the original dataset for use as a HanaAgent / OpenHanako Skill, including:
+This repository adapts the original Skill for Codex, including:
 
-- creating `SKILL.md` as the Agent instruction entry point;
-- organizing university information into local reference files;
-- adding an index for school lookup;
-- adding the UNTI university-life personality test page in `assets/UNTI-测试.html`;
-- adding personality-to-query mapping instructions;
-- adding radar-chart dimension analysis inside the UNTI test page.
-
-## Additional original content
-
-The UNTI personality test page, personality copywriting, interaction design, and character-result presentation are additional creative materials prepared for this Skill package.
+- renaming the project to `university-migration-guide` / 大学移民指南;
+- expanding `SKILL.md` with university livability, city life, cost, medical,
+  transport, retail, sports, entertainment, hotel, rental, and comparison workflows;
+- adding first-run guidance and installation verification;
+- adding Word report and installation scripts.
 
 ## License inheritance
 

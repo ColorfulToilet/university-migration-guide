@@ -30,5 +30,6 @@
 
 ## 数据来源
 
-- 学校生活数据来自 CollegesChat/university-information 问卷数据和原 `university-info-skill` 资源。
+- 本项目基于 [liliMozi/university-info-skill](https://github.com/liliMozi/university-info-skill) 二次开发，大学资料、UNTI 测试和相关图片字体素材继承自该项目。
+- 学校生活问卷数据的原始来源是 [CollegesChat/university-information](https://github.com/CollegesChat/university-information)。
 - 最新学费、住宿费、餐饮零售、医疗、交通、运动、演出、酒店和租房等信息，需要 Codex 在生成报告时联网核实。
