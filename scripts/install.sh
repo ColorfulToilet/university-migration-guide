@@ -15,5 +15,21 @@ fi
 mkdir -p "$dest_root"
 mkdir -p "$dest"
 rsync -a --exclude ".git" --exclude "outputs" "$repo_root/" "$dest/"
-echo "已安装到：$dest"
-echo "请重启 Codex，让新 Skill 自动识别。"
+
+required_files=(
+  "SKILL.md"
+  "assets/UNTI-测试.html"
+  "references/index.md"
+  "scripts/generate-report.py"
+)
+
+for required_file in "${required_files[@]}"; do
+  if [ ! -r "$dest/$required_file" ]; then
+    echo "安装验证失败，缺少或无法读取：$dest/$required_file"
+    exit 1
+  fi
+done
+
+echo "安装文件已验证完整：$dest"
+echo "请让 Codex 立即检查是否已识别 university-life-quality。"
+echo "只有当前对话仍然无法识别时，才需要重启 Codex。"
