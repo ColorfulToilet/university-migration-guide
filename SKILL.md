@@ -1,9 +1,9 @@
 ---
-name: university-life-quality
-description: "大学四年宜居度 Word 报告 Skill。完整吸收 university-info-skill 的学校问卷查询、UNTI 测试和 16 型人格映射，并增强为学校 + 城市生活 + 费用 + 餐饮零售 + 交通医疗 + 运动娱乐 + 酒店租房 + 多校对比的报告生成器。Use when the user asks to evaluate or compare 2-5 universities/colleges, decide which school is more livable, or check dorms, food delivery, McDonald's/KFC/Starbucks/Luckin/Mixue, supermarkets, convenience stores, Sam's Club/Hema/Ole/PoPo, internet and power cuts, curfew, tuition, city location, hospitals, transport, gyms, badminton or tennis courts, internet cafes, nightlife, concerts, anime conventions, hotels, rent, repairs, or monthly living cost. Also use when the user gives an UNTI result such as ZZZ, CIALLO, YUMY, FAKER, or AWSL. Default output is a clearly structured Word .docx report. On first use, proactively offer/open UNTI, explain direct school lookup and 2-5 school comparison, and state that the final result is a Word report."
+name: university-migration-guide
+description: "大学移民指南 Word 报告 Skill。完整吸收 university-info-skill 的学校问卷查询、UNTI 测试和 16 型人格映射，并增强为学校 + 城市生活 + 费用 + 餐饮零售 + 交通医疗 + 运动娱乐 + 酒店租房 + 多校对比的报告生成器。Use when the user asks to evaluate or compare 2-5 universities/colleges, decide which school is more livable, or check dorms, food delivery, McDonald's/KFC/Starbucks/Luckin/Mixue, supermarkets, convenience stores, Sam's Club/Hema/Ole/PoPo, internet and power cuts, curfew, tuition, city location, hospitals, transport, gyms, badminton or tennis courts, internet cafes, nightlife, concerts, anime conventions, hotels, rent, repairs, or monthly living cost. Also use when the user gives an UNTI result such as ZZZ, CIALLO, YUMY, FAKER, or AWSL. Default output is a clearly structured Word .docx report. On first use, proactively offer/open UNTI, explain direct school lookup and 2-5 school comparison, and state that the final result is a Word report."
 ---
 
-# 大学四年宜居度查询
+# 大学移民指南
 
 ## V2 目标
 
@@ -48,8 +48,8 @@ V2 必须做到：
 安装完成后先验证，再决定是否提示重启：
 
 1. 确认安装目录中至少存在可读取的 `SKILL.md`、`assets/UNTI-测试.html`、`references/index.md` 和 `scripts/generate-report.py`。
-2. 确认 Skill 名称是 `university-life-quality`。学校资料是同一套 Skill 的参考文件，不能说成“几千个 Skill”。
-3. 检查当前对话的 Skill 列表或调用状态是否已经出现 `university-life-quality`。若已出现，立即说明已经生效，无需重启。
+2. 确认 Skill 名称是 `university-migration-guide`。学校资料是同一套 Skill 的参考文件，不能说成“几千个 Skill”。
+3. 检查当前对话的 Skill 列表或调用状态是否已经出现 `university-migration-guide`。若已出现，立即说明已经生效，无需重启。
 4. 若当前对话无法识别，先重新读取安装目录并尝试一次显式调用。只有仍然失败时，才把重启 Codex 作为排障方法。
 5. 打开 UNTI 页面只能证明测试资产可用，不能单独证明整套 Skill 已被当前对话加载。
 
@@ -108,8 +108,8 @@ Word 生成方式：
 
 - 先生成结构化 Markdown，再运行 `scripts/generate-report.py 输入.md 输出.docx` 转换成 Word。
 - 如果 `python-docx` 不可用，先把 Markdown 交付给用户，并说明 Word 转换缺少依赖。
-- 文件名格式：`学校名-大学四年宜居度报告-YYYY-MM-DD.docx`。
-- 多校对比文件名格式：`大学宜居度对比报告-学校A-学校B-YYYY-MM-DD.docx`。
+- 文件名格式：`学校名-大学移民指南-YYYY-MM-DD.docx`。
+- 多校对比文件名格式：`大学移民对比指南-学校A-学校B-YYYY-MM-DD.docx`。
 
 ## 单校 Word 报告结构
 

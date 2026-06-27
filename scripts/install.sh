@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-skill_name="university-life-quality"
+skill_name="university-migration-guide"
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 dest_root="${CODEX_HOME:-$HOME/.codex}/skills"
 dest="$dest_root/$skill_name"
@@ -31,5 +31,5 @@ for required_file in "${required_files[@]}"; do
 done
 
 echo "安装文件已验证完整：$dest"
-echo "请让 Codex 立即检查是否已识别 university-life-quality。"
+echo "请让 Codex 立即检查是否已识别 university-migration-guide。"
 echo "只有当前对话仍然无法识别时，才需要重启 Codex。"
