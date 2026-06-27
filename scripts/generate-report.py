@@ -2,7 +2,7 @@
 """Convert a structured Markdown report into a simple Word .docx file.
 
 The script prefers python-docx when available. If it is not installed, it falls
-back to a minimal built-in OOXML writer so V1 can still produce a real .docx.
+back to a minimal built-in OOXML writer so the Skill can still produce a real .docx.
 """
 
 from __future__ import annotations
